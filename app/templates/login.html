@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FRPC Launcher - 登录</title>
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body class="theme-dark auth-bg">
+  <main class="auth-shell fade-in-up">
+    <section class="glass card">
+      <h1>FRPC Launcher</h1>
+      <p class="muted">安全登录后管理你的 FRPC 链接</p>
+      <div class="tabs">
+        <button id="tabLogin" class="active">登录</button>
+        <button id="tabRegister">注册</button>
+      </div>
+      <form id="authForm">
+        <label>用户名<input id="username" minlength="3" required /></label>
+        <label>密码<input id="password" type="password" minlength="8" required /></label>
+        <button class="primary" type="submit" id="submitBtn">登录</button>
+      </form>
+      <p id="authMsg" class="msg"></p>
+    </section>
+  </main>
+  <script src="/static/js/auth.js"></script>
+</body>
+</html>

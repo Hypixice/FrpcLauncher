@@ -1,0 +1,6 @@
+{
+  "max_login_attempts": 5,
+  "lockout_seconds": 300,
+  "session_expire_seconds": 43200,
+  "api_rate_limit_per_minute": 200
+}

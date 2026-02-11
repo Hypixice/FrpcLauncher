@@ -1,0 +1,6 @@
+{
+  "app_name": "FRPC Launcher",
+  "host": "0.0.0.0",
+  "port": 5000,
+  "frpc_download_url_template": "https://github.com/fatedier/frp/releases/download/{version}/frp_{version}_{platform}_{arch}.{ext}"
+}

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FRPC Launcher - 控制台</title>
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body class="theme-dark">
+  <header class="topbar slide-down">
+    <div>
+      <h1>FRPC Launcher</h1>
+      <span class="muted">现代化 frpc 启动控制台</span>
+    </div>
+    <div class="toolbar">
+      <button id="themeToggle" class="ghost">敏感色切换</button>
+      <button id="logoutBtn" class="danger">退出</button>
+    </div>
+  </header>
+
+  <main class="grid">
+    <section class="glass card fade-in-up">
+      <h2>FRPC 管理</h2>
+      <div class="row">
+        <input id="importPath" placeholder="导入本地 frpc 路径 /usr/local/bin/frpc" />
+        <button id="importBtn">导入</button>
+      </div>
+      <div class="row">
+        <input type="file" id="uploadFile" />
+        <button id="uploadBtn">上传</button>
+      </div>
+      <div class="row">
+        <input id="version" value="v0.61.1" />
+        <select id="platform"><option>linux</option><option>windows</option><option>darwin</option></select>
+        <select id="arch"><option>amd64</option><option>arm64</option></select>
+        <button id="downloadBtn">下载</button>
+      </div>
+      <div class="row">
+        <label>已可用二进制</label>
+        <select id="binarySelect"></select>
+      </div>
+    </section>
+
+    <section class="glass card fade-in-up delay-1">
+      <h2>创建链接</h2>
+      <div class="row">
+        <input id="linkName" placeholder="链接名，例如 Office-SSH" />
+        <select id="templateSelect"></select>
+        <button id="loadTemplateBtn">加载模板</button>
+      </div>
+      <div class="row">
+        <label><input type="radio" name="cfgType" value="ini" checked /> INI</label>
+        <label><input type="radio" name="cfgType" value="toml" /> TOML</label>
+      </div>
+      <textarea id="configBody" rows="12" placeholder="输入配置"></textarea>
+      <button id="createLinkBtn" class="primary">创建链接</button>
+    </section>
+
+    <section class="glass card fade-in-up delay-2 full">
+      <h2>链接列表</h2>
+      <div id="links" class="link-list"></div>
+    </section>
+  </main>
+
+  <div id="toast"></div>
+  <script src="/static/js/dashboard.js"></script>
+</body>
+</html>

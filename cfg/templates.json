@@ -1,0 +1,14 @@
+{
+  "templates": [
+    {
+      "name": "basic_ini",
+      "type": "ini",
+      "body": "[common]\nserver_addr=127.0.0.1\nserver_port=7000\ntoken=your_token\n\n[ssh]\ntype=tcp\nlocal_ip=127.0.0.1\nlocal_port=22\nremote_port=6000\n"
+    },
+    {
+      "name": "basic_toml",
+      "type": "toml",
+      "body": "serverAddr = '127.0.0.1'\nserverPort = 7000\nauth.token = 'your_token'\n\n[[proxies]]\nname = 'web'\ntype = 'tcp'\nlocalIP = '127.0.0.1'\nlocalPort = 8080\nremotePort = 18080\n"
+    }
+  ]
+}
